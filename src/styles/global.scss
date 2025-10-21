@@ -7,14 +7,72 @@ body {
     background-color: $Blanco;
 }
 
-
 // Variantes de texto
 .text-green {
   color: $Verde-oscuro;
 }
 
+.text-gray{
+  color: $Gris-claro;
+}
+
 .text-bold {
   font-weight: $font-weight-bold;
+}
+
+.text-small{
+  font-size: $font-size-small;
+}
+
+.text-big{
+  font-size: $font-size-big;
+}
+
+.text-extra-big{
+  font-size: $font-size-extra-big;
+}
+
+a {
+  color: $Gris-oscuro;
+  text-decoration: none;
+}
+
+//Buttons
+@mixin button-style($bg, $color, $border) {
+  background-color: $bg;
+  color: $color;
+  border: $border;
+  border-radius: 50px;
+  padding: 0.5rem 2rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background-color: $color;
+    color: $bg;
+  }
+}
+
+.green-button {
+  @include button-style($Blanco, $Verde-claro, 2px solid $Verde-claro);
+}
+
+.green-button-tab {
+  color: $Verde-oscuro;
+  border: 2px solid $Verde-claro;
+  border-radius: 50px;
+  padding: 0.5rem 2rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background-color: $Verde-claro;
+    border: 2px solid $Verde-oscuro;
+    color: $Verde-oscuro;
+  }
+  &:focus{
+    background-color: $Verde-claro;
+  }
 }
 
 
@@ -26,13 +84,160 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
-    text-align: center;
 }
 
 
 //Nav
-.nav {
-   top: -100px;
-   border-radius: 50%;
+.main-navbar {
+  position: absolute;
+  top: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  background: rgba(255, 255, 255, 0.606);
+  border-radius: 50px;
+  backdrop-filter: blur(8px);
+  padding: 0.4rem 1.2rem;
+  z-index: 10;
+
+  .navbar-brand {
+    img.navbar-logo {
+      height: 28px;
+      width: auto;
+    }
+  }
+
+  .navbar-nav {
+    .nav-item {
+      .nav-link {
+        color: $Verde-oscuro;
+        font-size: 0.9rem;
+        border-radius: 40px;
+        padding: 0.5rem 1.2rem;
+        transition: all 0.2s ease;
+        background-color: transparent;
+
+        &:hover {
+          background-color: $Verde-claro;
+          color: $Verde-oscuro;
+        }
+
+        &.active {
+          background-color: $Verde-claro;
+          color: $Verde-oscuro;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+
+  // Responsive
+  @media (max-width: 768px) {
+    width: 95%;
+    padding: 0.6rem 1rem;
+
+    .navbar-collapse {
+      background-color: transparent;
+      border-radius: 20px;
+      margin-top: 0.5rem;
+      padding: 0.8rem;
+    }
+
+    .nav-link {
+      display: block;
+      text-align: center;
+      margin-bottom: 0.3rem;
+    }
+  }
+}
+
+//Subnavar
+.btn-subnavbar.active-tab {
+  background-color: $Blanco;
+  color: $Verde-oscuro;
+  border: 1px solid $Blanco; 
+}
+
+.btn-subnavbar {
+  transition: all 0.2s ease-in-out;
+}
+
+.subnavbar{
+    background-color: $Verde-claro;
+    border: 2px solid $Verde-claro;
+    border-radius: 50px;
+}
+
+.btn-subnavbar{
+  background-color: $Verde-claro;
+  border-radius: 50px;
+
+  &:hover {
+    background-color: $Blanco;
+    color: $Verde-oscuro;
+  }
+
+  &:focus {
+    background-color: $Blanco;
+  }
+}
+
+//Accordion
+.accordion.variant-main {
+  .accordion-button {
+    border: 0.5px solid $Verde-claro;
+    border-left: 4px solid $Verde-claro;
+    border-radius: 40px;
+  }
+}
+
+.accordion-body{
+  background: transparent;
+}
+
+.accordion.variant-footer {
+  .accordion-button {
+    border-bottom: transparent;
+  }
+}
+
+.accordion-button:focus {
+  box-shadow: none;
+  border-color: transparent;
+  outline: none;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: transparent;
+  color: inherit;
+  box-shadow: none;
+}
+
+
+//Footer
+footer{
+    background: linear-gradient(to bottom, $Blanco, $Verde-claro);
+    text-align: center;
+  .accordion-item {
+    background-color: transparent;
+    border: none;
+  }
+  .accordion-button {
+    background-color: transparent;
+    color: #2f4f2f;
+    &:not(.collapsed) {
+      background-color: rgba(255, 255, 255, 0.2); 
+    }
+  }
+  .accordion-body {
+    background-color: transparent; 
+  }
+  @media (min-width: 768px) {
+    text-align: start; 
+  }
+}
+
+.container-footer{
+  border: 0.5px solid $Gris-light;
+  border-radius: 20px;
 }

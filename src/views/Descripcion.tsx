@@ -1,6 +1,6 @@
-// src/views/Descripcion.tsx
-import vidamaxImage from "../assets/images/vidamax-image.png"; // 👈 importa la imagen
+import vidamaxImage from "../assets/images/vidamax-image.png";
 import { Accordion } from "../components/Accordion";
+import { GreenButton } from "../components/Button";
 
 export const Descripcion = () => {
   const items = [
@@ -56,19 +56,17 @@ export const Descripcion = () => {
   return (
     <div className="container">
       <div className="row">
-        <div className="col-7">
+        <div className="col-12 col-lg-7">
           <p>
-            <span className="text-green text-bold">Cuidamos de tu familia
+            <span className="text-green text-bold">Cuidamos de tu familia</span><br />
             Apoyo económico para tu familia en caso de fallecimiento natural o
-            accidental.</span> 
+            accidental.
           </p>
-
-          <Accordion items={items} />
-
-          <button className="btn btn-primary mt-3">Regresar</button>
+          <Accordion items={items} variant="main" className="variant-main"/>
+          <GreenButton onClick={() => alert("Botón 1")}>Regresar</GreenButton>
         </div>
-        <div className="col-4">
-          <img src={vidamaxImage} alt="Familia sonriendo junta" className="img-fluid" />
+        <div className="col-12 col-lg-5 text-center">
+          <img src={vidamaxImage} alt="Familia sonriendo junta - Una familia sonriendo junta, simbolizando unidad, apoyo mutuo y tranquilidad, valores centrales del seguro Vidamax" className="img-fluid" loading="lazy" />
         </div>
       </div>
     </div>

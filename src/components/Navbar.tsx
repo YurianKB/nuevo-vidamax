@@ -1,16 +1,48 @@
-// src/components/Navbar.tsx
-import React from "react";
+export const Navbar = () => {
+  return (
+    <nav className="navbar navbar-expand-md main-navbar">
+      <div className="container d-flex align-items-center justify-content-between">
+        <a className="navbar-brand text-bold text-gray" href="#">
+          Seguros Azteca
+        </a>
 
-export const Navbar = () => (
-    <nav className="navbar bg-body-tertiary">
-        <div className="container-fluid">
-            <a className="navbar-brand"><img src="../" alt="" /><span class="text-bold">Seguros Azteca</span></a>
-            <div className="d-flex">
-                <a className="nav-link text-bold active" aria-current="page" href="#">Inicio</a>
-                <a className="nav-link text-bold" href="#">Nuestros Seguros</a>
-                <a className="nav-link text-bold" href="#">Centro de ayuda</a>
-                <a className="nav-link text-bold" href="#">Pólizas</a>
-            </div>
+        <button
+          className="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span className="navbar-toggler-icon"></span>
+        </button>
+
+        <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul className="navbar-nav d-flex align-items-center gap-2">
+            <li className="nav-item">
+              <a className="nav-link active text-bold" href="#">
+                Inicio
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link text-bold" href="#">
+                Nuestros seguros
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link text-bold" href="#">
+                Centro de ayuda
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link text-bold" href="#">
+                Pólizas
+              </a>
+            </li>
+          </ul>
         </div>
+      </div>
     </nav>
-);
+  );
+};
