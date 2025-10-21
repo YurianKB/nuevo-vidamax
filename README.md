@@ -8,7 +8,14 @@ Proyecto desarrollado con React + TypeScript + Vite + Bootstrap + SCSS.
 - /styles: Variables y estilos globales
 - /routes: Configuración de rutas internas
 
-### Arquitectura del Proyecto
+## Decisiones técnicas
+
+- Se utilizó **Vite** por su velocidad de compilación
+- **Bootstrap 5** para una maquetación rápida y responsive
+- **SCSS** para mantener un control visual más preciso
+- Se mantuvo un estilo limpio y accesible
+
+## Arquitectura del Proyecto
 ```plaintext
 src
 ├── assets           # Imágenes, íconos y recursos estáticos
@@ -31,7 +38,7 @@ src
 ├── index.tsx         # Punto de entrada de la aplicación
 └── App.tsx           # Componente principal con layout y navegación
 
-## Cómo correr el proyecto
+Cómo correr el proyecto
 1.  Clonar el repositorio:
    ```bash
    git clone https://github.com/tu-usuario/nuevo-vidamax.git
