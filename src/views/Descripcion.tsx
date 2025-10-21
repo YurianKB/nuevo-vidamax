@@ -1,6 +1,6 @@
-import vidamaxImage from "../assets/images/vidamax-image.png";
 import { Accordion } from "../components/Accordion";
 import { GreenButton } from "../components/Button";
+import vidamaxImage from "../assets/images/vidamax-image.png";
 
 export const Descripcion = () => {
   const items = [
@@ -67,7 +67,7 @@ export const Descripcion = () => {
         </div>
         <div className="col-12 col-lg-5 text-center">
           <img src={vidamaxImage} alt="Familia sonriendo junta - Una familia sonriendo junta, simbolizando unidad, apoyo mutuo y tranquilidad, valores centrales del seguro Vidamax" className="img-fluid" loading="lazy" />
-        </div>
+      </div>
       </div>
     </div>
   );

@@ -241,3 +241,10 @@ footer{
   border: 0.5px solid $Gris-light;
   border-radius: 20px;
 }
+
+//Para mantener siempre los acordeones del footer abiertos (Pero no entendí bien cómo iba en la imagen que mandaron)
+//.accordion.variant-footer .accordion-collapse {
+  //display: block !important;
+  //visibility: visible;
+  //height: auto !important;
+//}

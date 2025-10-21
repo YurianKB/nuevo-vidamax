@@ -53,6 +53,7 @@ export const Footer = () => (
             parentId="accordionSobre"
             variant="footer"
             className="variant-footer show"
+            defaultOpen={true}
             items={[
               {
                 id: "sobreNosotros",
