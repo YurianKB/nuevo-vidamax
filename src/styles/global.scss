@@ -1,26 +1,38 @@
 @import './variables';
 
 body {
-  font-family: $font-main;
-  margin: 0;
-  padding: 0;
-  background-color: #f9f9f9;
+    font-family: $font-main;
+    font-size: $font-size-base;
+    color: $Gris-oscuro;
+    background-color: $Blanco;
 }
 
-.container {
-  max-width: $max-width-container;
-  margin: 0 auto;
-  padding: 0 15px;
+
+// Variantes de texto
+.text-green {
+  color: $Verde-oscuro;
 }
+
+.text-bold {
+  font-weight: $font-weight-bold;
+}
+
 
 // Banner.scss
 .banner {
     background-image: url("../assets/images/familia-deseguros.webp");
-  height: $banner-height;
-  background-size: cover;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  text-align: center;
+    height: $banner-height;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+
+//Nav
+.nav {
+   top: -100px;
+   border-radius: 50%;
 }

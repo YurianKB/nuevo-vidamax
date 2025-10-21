@@ -1,7 +1,7 @@
 export const Banner = () =>
-<div class="container-fluid text-center banner">
-  <div class="row">
-    <div class="col">
+<div className="container-fluid text-center banner">
+  <div className="row">
+    <div className="col">
       Column
     </div>
   </div>

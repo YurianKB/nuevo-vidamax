@@ -2,11 +2,13 @@
 import React, { useState } from "react";
 import { Banner} from "../components/Banner";
 import { Navbar } from "../components/Navbar";
+import { Footer } from "../components/Footer";
 import { SubNavbar } from "../components/SubNavbar";
 import { Descripcion } from "../views/Descripcion";
 import { Planes } from "../views/Planes";
 import { Siniestro } from "../views/Siniestro";
 import { Condiciones } from "../views/Condiciones";
+
 
 export const AppRoutes = () => {
   const [view, setView] = useState("descripcion");
@@ -28,10 +30,11 @@ export const AppRoutes = () => {
 
   return (
     <div>
-      <Banner />
       <Navbar />
+      <Banner />
       <SubNavbar setView={setView} />
       <div className="container mt-4">{renderView()}</div>
+      <Footer />
     </div>
   );
 };
