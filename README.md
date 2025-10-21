@@ -9,5 +9,21 @@ Proyecto desarrollado con React + TypeScript + Vite + Bootstrap + SCSS.
 - /routes: Configuración de rutas internas
 
 ## Cómo correr el proyecto
-1. npm install
-2. npm run dev
+1.  Clonar el repositorio:
+   ```bash
+   git clone https://github.com/tu-usuario/nuevo-vidamax.git
+
+2.  Entrar al directorio del proyecto:
+    cd nuevo-vidamax
+
+3.	Instalar dependencias:
+    npm install
+
+4.  Ejecutar el entorno de desarrollo
+    npm run dev
+
+5.	Abrir en el navegador la URL del localhost: http://localhost:5173
+
+👩‍💻 Desarrollado por
+Yurián Castañeda
+Frontend Developer
