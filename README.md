@@ -9,22 +9,23 @@ Proyecto desarrollado con React + TypeScript + Vite + Bootstrap + SCSS.
 - /routes: Configuración de rutas internas
 
 ### Arquitectura del Proyecto
-/src
-├── /assets           # Imágenes, íconos y recursos estáticos
+```plaintext
+src
+├── assets           # Imágenes, íconos y recursos estáticos
 │   └── images/
-├── /components       # Componentes reutilizables de la aplicación
+├── components       # Componentes reutilizables de la aplicación
 │   ├── Accordion.tsx
 │   ├── Banner.tsx
 │   ├── Button.tsx
 │   ├── Footer.tsx
 │   ├── Navbar.tsx
 │   └── SubNavbar.tsx
-├── /views            # Vistas principales de la sección Nuevo Vidamax
+├── views            # Vistas principales de la sección Nuevo Vidamax
 │   ├── Condiciones.tsx
 │   ├── Descripcion.tsx
 │   ├── Planes.tsx
 │   └── Siniestro.tsx
-├── /styles           # Archivos SCSS
+├── styles           # Archivos SCSS
 │   ├── _variables.scss  # Variables de color, tipografía y tamaños
 │   └── global.scss      # Estilos globales
 ├── index.tsx         # Punto de entrada de la aplicación
